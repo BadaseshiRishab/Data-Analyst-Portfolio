@@ -113,6 +113,14 @@ nav ul li a:hover {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.round-imageP {
+    width: 200px;
+    height: 200px;
+    border-radius: 500px;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 
 .split-section {
     display: flex;
@@ -218,5 +226,20 @@ footer {
     
     .image-content {
         margin-top: 1rem;
+    }
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 768px) {
+    .round-image {
+        width: 30vw; /* Increase the relative size for smaller screens */
+        height: 30vw;
+    }
+}
+
+@media (max-width: 480px) {
+    .round-image {
+        width: 40vw; /* Further increase the relative size for mobile */
+        height: 40vw;
     }
 }
