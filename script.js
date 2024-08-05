@@ -1,9 +1,14 @@
 document.getElementById('contact-form').addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (name === '' || email === '' || message === '') {
+        alert('Please fill in all fields before submitting.');
+        return;
+    }
 
     alert(`Thank you for your message, ${name}! We will get back to you at ${email}.`);
 

@@ -44,32 +44,44 @@ nav ul li a:hover {
 
 .welcome-section {
     position: relative;
-    background-color: #333;
+    background: url('background.jpg') no-repeat center center/cover;
     color: #fff;
     text-align: center;
-    padding: 4rem 0;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: row;
+}
+
+.welcome-section .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
 }
 
 .welcome-section .content {
+    position: relative;
+    z-index: 2;
     display: flex;
+    flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    max-width: 1000px;
+    padding: 2rem;
+    max-width: 1200px;
     width: 100%;
-    text-align: left;
-    padding: 0 20px;
 }
 
 .welcome-section .text-content {
-    flex: 1;
+    max-width: 50%;
+    text-align: left;
 }
 
 .welcome-section .text-content h1 {
-    font-size: 2.5rem;
+    font-size: 3rem;
     margin-bottom: 0.5rem;
 }
 
@@ -93,38 +105,51 @@ nav ul li a:hover {
     background-color: #cc5200;
 }
 
-.image-content {
-    flex: 0 0 auto;
-    padding-left: 20px;
-}
-
 .round-image {
-    width: 300px; /* Adjust size as needed */
-    height: 300px;
-    border-radius: 50%;
-    border: 3px solid #fff;
+    width: 500px;
+    height: 500px;
+    border-radius: 500px;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.filled-section {
+
+.split-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
     padding: 2rem;
     text-align: left;
     background-color: #fff;
-    margin: 0 auto;
-    max-width: 1000px;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex: 1;
+}
+
+.single-section {
+    padding: 2rem;
+    text-align: left;
+    background-color: #fff;
+    margin: 1rem;
+    border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-.section-image {
+.text-content, .image-content {
+    flex: 1;
+    padding: 1rem;
+}
+
+.text-content {
+    max-width: 600px;
+}
+
+.image-content img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
-    margin-bottom: 2rem;
-}
-
-.project {
-    margin-bottom: 2rem;
 }
 
 h1, h2, h3 {
@@ -182,4 +207,16 @@ footer {
     padding: 1rem 0;
     width: 100%;
     flex-shrink: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .welcome-section .content, .split-section {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .image-content {
+        margin-top: 1rem;
+    }
 }
