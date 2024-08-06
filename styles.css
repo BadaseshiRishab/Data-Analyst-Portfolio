@@ -232,7 +232,7 @@ footer {
         text-align: center;
     }
     .round-image {
-        max-width: 40vw; /* Relative size for smaller screens */
+        max-width: 45vw; /* Relative size for smaller screens */
     }
     .image-content{
         max-width: 50vw;
