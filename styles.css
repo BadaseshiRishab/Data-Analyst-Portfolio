@@ -238,7 +238,7 @@ footer {
         max-width: 50vw;
     }
     #projects .image-content img {
-        transform: rotate(90deg); /* Rotate image 180 degrees only in projects section */
+        transform: rotate(270deg); /* Rotate image 180 degrees only in projects section */
     }
 }
 
